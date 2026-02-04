@@ -1,9 +1,13 @@
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+{% assign pagefind_base = site.baseurl | default: "" %}
+<link href="{{ pagefind_base }}/pagefind/pagefind-ui.css" rel="stylesheet">
 <script>
+    // Store baseurl for dynamic path resolution
+    window.PAGEFIND_BASE = "{{ pagefind_base }}";
     // Preload Pagefind API
     (async function() {
         try {
-            const pagefind = await import("/pagefind/pagefind.js");
+            const pagefindPath = "{{ pagefind_base }}/pagefind/pagefind.js";
+            const pagefind = await import(pagefindPath);
             window.pagefind = pagefind;
             console.log('Pagefind API loaded successfully');
         } catch (error) {
@@ -11,7 +15,7 @@
         }
     })();
 </script>
-<script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<script src="{{ pagefind_base }}/pagefind/pagefind-ui.js" type="text/javascript"></script>
 <!-- The Modal Structure -->
 <dialog id="searchModal" class="search-dialog">
     <button class="search-modal-close" onclick="closeSearchModal()" aria-label="Close search">✕</button>
@@ -145,7 +149,7 @@
         try {
             // Try to detect the correct path
             const scriptTag = document.querySelector('script[src*="pagefind-ui.js"]');
-            let bundlePath = "/pagefind/";
+            let bundlePath = (window.PAGEFIND_BASE || "") + "/pagefind/";
             if (scriptTag) {
                 const scriptSrc = scriptTag.getAttribute('src');
                 const scriptPath = scriptSrc.substring(0, scriptSrc.lastIndexOf('/') + 1);
