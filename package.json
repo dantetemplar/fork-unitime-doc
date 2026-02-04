@@ -7,6 +7,6 @@
     "build": "bundle exec jekyll build && npm run pagefind"
   },
   "devDependencies": {
-    "pagefind": "^1.0.0"
+    "pagefind": "beta"
   }
 }
