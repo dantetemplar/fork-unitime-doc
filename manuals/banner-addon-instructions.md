@@ -197,78 +197,78 @@ There are changes that will need to be made to the ***custom.properties*** or **
 tmtbl.db.addon.update.class=org.unitime.banner.commons.hibernate.util.BannerAddOnDatabaseUpdate
 
 #Course Number pattern (this needs to be updated to match what is used 
-#  in your instance of Banner) - the following is an example of a 5 digit 
-#  course number that is used for Banner and an additional 2 characters 
-#  that are not sent to Banner:
+##  in your instance of Banner) - the following is an example of a 5 digit 
+##  course number that is used for Banner and an additional 2 characters 
+##  that are not sent to Banner:
 tmtbl.courseNumber.pattern=^[0-9][0-9][0-9][0-9][0-9]([A-Za-z]){0,2}$
 tmtbl.courseNumber.patternInfo=Course Number must have 5 numbers followed by up to two optional letters (e.g. 21400, 34200X, 59000AB)
 
-# Property to define the class that is called when a instructional offering config is added/changed.
+## Property to define the class that is called when a instructional offering config is added/changed.
 tmtbl.external.instr_offr_config.change_action.class=org.unitime.banner.util.BannerInstrOffrConfigChangeAction
-# Property to define the class that is called when an instructional offering is added.
+## Property to define the class that is called when an instructional offering is added.
 tmtbl.external.instr_offr.add_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called when an instructional offering is deleted.
+## Property to define the class that is called when an instructional offering is deleted.
 tmtbl.external.instr_offr.delete_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called when an instructional offering is made not offered.
+## Property to define the class that is called when an instructional offering is made not offered.
 tmtbl.external.instr_offr.not_offered_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called when an instructional offering is made offered.
+## Property to define the class that is called when an instructional offering is made offered.
 tmtbl.external.instr_offr.offered_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called when an instructional offering crosslisting is changed.
+## Property to define the class that is called when an instructional offering crosslisting is changed.
 tmtbl.external.instr_offr.crosslist_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called at the end of the course offering edit action
+## Property to define the class that is called at the end of the course offering edit action
 tmtbl.external.course_offering.remove_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called when a course offering is deleted
+## Property to define the class that is called when a course offering is deleted
 tmtbl.external.course_offering.edit_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called at the end of the assign instructors action
+## Property to define the class that is called at the end of the assign instructors action
 tmtbl.external.instr_offr_config.assign_instructors_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called at the end of the edit scheduling subpart action
+## Property to define the class that is called at the end of the edit scheduling subpart action
 tmtbl.external.sched_subpart.edit_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called at the end of the edit class action
+## Property to define the class that is called at the end of the edit class action
 tmtbl.external.class.edit_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called at the end of the edit reservation action
+## Property to define the class that is called at the end of the edit reservation action
 tmtbl.external.reservation.edit_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called when a solution is committed or uncommited
+## Property to define the class that is called when a solution is committed or uncommited
 tmtbl.external.solution.commit_action.class=org.unitime.banner.util.BannerChangeAction
-# Property to define the class that is called when a solution is committed or uncommited
+## Property to define the class that is called when a solution is committed or uncommited
 tmtbl.external.instr_offr_in_crosslist.add_action.class=org.unitime.banner.util.BannerChangeAction
 
 
-# Property to define the class that is called to perform a custom action during the banner session roll forward - if needed this class would be developed by your institution
+## Property to define the class that is called to perform a custom action during the banner session roll forward - if needed this class would be developed by your institution
 tmtbl.banner.session.rollForward.custom=
-# Property to define the class that is called to create a custom campus element in the banner message - if needed this class would be developed by your institution, samples can be seen in the UniTime Banner Add On code.
+## Property to define the class that is called to create a custom campus element in the banner message - if needed this class would be developed by your institution, samples can be seen in the UniTime Banner Add On code.
 tmtbl.banner.campus.element.helper=
-# Property to define the class that is called to create a custom session element in the banner message - if needed this class would be developed by your institution, samples can be seen in the UniTime Banner Add On code.
+## Property to define the class that is called to create a custom session element in the banner message - if needed this class would be developed by your institution, samples can be seen in the UniTime Banner Add On code.
 tmtbl.banner.session.element.helper=
 
 
-# Property to define stored procedure that is called to get new banner section identifier - Uncomment the proper format of the call based on the database type you are using
-# mysql version
+## Property to define stored procedure that is called to get new banner section identifier - Uncomment the proper format of the call based on the database type you are using
+## mysql version
 #banner.section_id.generator={?= call get_section(?,?,?)}
-# oracle version
+## oracle version
 #banner.section_id.generator={?= call section_processor.get_section(?,?,?)}
 
-# Property to define stored procedure that is called to get new banner croslist identifier
-# mysql version
+## Property to define stored procedure that is called to get new banner croslist identifier
+## mysql version
 #banner.crosslist_id.generator={?= call get_cross_list_id(?)}
-# oracle version
+## oracle version
 #banner.crosslist_id.generator={?= call cross_list_processor.get_cross_list_id(?)}
 
-# Property to define stored procedure that is called to validate a section index is unique for a course
-# mysql version
+## Property to define stored procedure that is called to validate a section index is unique for a course
+## mysql version
 #banner.section_id.validator={?= call section_exists(?,?,?,?)}
-# oracle version
+## oracle version
 #banner.section_id.validator={?= call #sys.diutil.bool_to_int(section_processor.section_exists(?,?,?,?))}
 
-# Property to define stored procedure that is called to get new banner crn
-# mysql version
+## Property to define stored procedure that is called to get new banner crn
+## mysql version
 #banner.crn.generator={call get_crn(?, ?)}
-# oracle version
+## oracle version
 #banner.crn.generator={? = call crn_processor.get_crn(?)}
 
-# Property to define stored procedure that is called to get new banner link identifier
-# mysql version
+## Property to define stored procedure that is called to get new banner link identifier
+## mysql version
 #banner.link_id.generator={?= call get_link_identifier(?,?,?)}
-# oracle version
+## oracle version
 #banner.link_id.generator={?= call timetable.section_processor.get_link_identifier(?,?,?)}
 ```
 Once these changes have been applied you may deploy the UniTimeB.war file to a web server.

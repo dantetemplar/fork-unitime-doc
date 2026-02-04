@@ -11,7 +11,7 @@ updated: April, 2019
 {:toc}
 
 
-# Authentication
+## Authentication
 
 
 API calls can use HTTP-simple authentication with a user created using the UniTime’s [Users](../users-database-authentication) page, or if enabled (by setting the application property unitime.api.canUseToken to true) it can authenticated via an API token. The API token can be passed as an additional attribute (named `token`) on any API call. The user must have a default role with the appropriate API permission. The API token is available on the Users page (when enabled), it is computed using the username and hashed password (changing password will also change the API token for a user).
@@ -50,7 +50,7 @@ The available permissions are
 
 * Api Retrieve Student Groups
 
-# Cache Mode
+## Cache Mode
 
 
 It is possible to change the hibernate cache mode for a particular API connector by setting the `unitime.api.X.cacheMode` application property (where `X` is the connector name). For example, setting `unitime.api.enrollments.cacheMode=REFRESH` will make the /api/enrollments connector to never read the hibernate cache, but it will keep it updated.
@@ -78,7 +78,7 @@ Possible values are:
 
 
 
-# 1 User Roles
+## 1 User Roles
 
 
 The api/roles call returns a list of academic sessions and roles for a user.
@@ -172,7 +172,7 @@ Returns: all academic session, including their dates and status.
 
 
 
-# 2 Instructor Schedule
+## 2 Instructor Schedule
 
 
 The following call will return a list of classes (instructor), courses (coordinator), and exams (instructor) for an instructor. Unlike the events API, it does not show individual meetings (see below), but the results are much more compact.
@@ -320,7 +320,7 @@ When the assigned room is not a room but a non-university location (e.g., SITE, 
 
 
 
-# 3 Class Info
+## 3 Class Info
 
 
 The following calls return information about a particular class.
@@ -451,7 +451,7 @@ Example Response:
 }
 ```
 
-# 4 Enrollments
+## 4 Enrollments
 
 
 Following call will return enrollments of a class, a course, an examination, or an event.
@@ -505,7 +505,7 @@ Example Response:
 
 
 
-# 5 Events
+## 5 Events
 
 
 The events API that is capable of returning any data displayed on the [Events](../events), [Event Timetable](../event-timetable), or [Event Room Availability](../event-room-availability) pages. The following URL is based on a personal timetable, restricting output to class events for which the person is instructor (i.e., not student or coordinator).
@@ -1093,7 +1093,7 @@ Example Response:
 ```
 
 
-# 6 Rooms
+## 6 Rooms
 
 
 The rooms API that is capable of returning a list of rooms and their properties.
@@ -1446,7 +1446,7 @@ For create, update and delete, the Api Room Edit permission is needed together w
 
 
 
-# 7 Buildings
+## 7 Buildings
 
 
 The buildings API can be used to retrieve and/or update buildings for a particular academic session. It has the following properties:
@@ -1578,7 +1578,7 @@ curl -u admin:admin -X DELETE http://demo.unitime.org/UniTime/api/buildings?term
 
 Permission ApiRoomEdit is needed together with BuildingDelete.
 
-# 8 Online Student Scheduling
+## 8 Online Student Scheduling
 
 
 The API allows for pretty much all the calls of the [SectioningService](https://github.com/UniTime/unitime/blob/master/JavaSource/org/unitime/timetable/gwt/services/SectioningService.java) are covered, except of those related to HTTP session attributes (e.g., last request / schedule). The [SectioningService](https://github.com/UniTime/unitime/blob/master/JavaSource/org/unitime/timetable/gwt/services/SectioningService.java) is for instance used by the [Student Scheduling Assistant](../student-scheduling-assistant) and the [Online Student Scheduling Dashboard](../online-student-scheduling-dashboard) pages.
@@ -1982,7 +1982,7 @@ Example Request Message:
 The above list of operation is not exhaustive. For the full list of available operations, see the [OnlineStudentSchedulingConnector.Operation](https://github.com/UniTime/unitime/blob/master/JavaSource/org/unitime/timetable/api/connectors/OnlineStudentSchedulingConnector.java#L147) enum.
 
 
-# 9 Data Exchange
+## 9 Data Exchange
 
 
 The api/exchange connector has the same capability as the [Data Exchange](../data-exchange) page. This means that it can be used to export or to import any XML file that are listed on the [XML Interfaces](../xml) web page. Permission Api Data Exchange Connector is required.
@@ -2039,7 +2039,7 @@ The response contains the same log as is visible on the [Data Exchange](../data-
 
 
 
-# 10 JSON RPC
+## 10 JSON RPC
 
 
 All the calls from the GWT code (e.g., event management) that are using the GWT RPC Command pattern (the request implements the [GwtRpcRequest](https://github.com/UniTime/unitime/blob/master/JavaSource/org/unitime/timetable/gwt/command/client/GwtRpcRequest.java) class, the response implements the [GwtRpcResponse](https://github.com/UniTime/unitime/blob/master/JavaSource/org/unitime/timetable/gwt/command/client/GwtRpcResponse.java) class and the server call is implemented by a Spring service annotated with the [@GwtRpcImplements](https://github.com/UniTime/unitime/blob/master/JavaSource/org/unitime/timetable/gwt/command/server/GwtRpcImplements.java) annotation) can be called using the api/json connector. The permission Api Json Connector is required together with the appropriate permissions that are checked by the appropriate implementation.
@@ -2140,7 +2140,7 @@ Example Response:
 
 
 
-# 11 Instructors
+## 11 Instructors
 
 
 The api/instructors call returns a list of instructors for the given department or academic session.
@@ -2211,7 +2211,7 @@ Example Response:
 ```
 
 
-# 12 Student Groups
+## 12 Student Groups
 
 
 The api/student-groups call returns a list of student groups for the given academic session.
@@ -2277,7 +2277,7 @@ Example Response:
 ]
 ```
 
-# 13 Curricula
+## 13 Curricula
 
 
 The api/curricula call returns a list of curricula for the given academic session.
@@ -2463,7 +2463,7 @@ Example Response:
 ]
 ```
 
-# 14 Script
+## 14 Script
 
 
 The api/script can be used to execute a script, check its progress, and retrieve the results.

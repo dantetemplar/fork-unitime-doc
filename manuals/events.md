@@ -9,7 +9,7 @@ updated: November 2025
 * table
 {:toc}
 
-# Login and Navigation
+## Login and Navigation
 
 Log in to the UniTime website using your customary university username and password or the password provided by your system administrator. The URL of the login page should be provided by the organizational unit responsible for scheduling events in the locations of interest.
 
@@ -19,7 +19,7 @@ The Event Management application is available under the Events menu.
 
 ![Event Management Manual](images/events-2.png){:class='screenshot'}
 
-# View Scheduled Events (Events Page)
+## View Scheduled Events (Events Page)
 
 To view an event or set of events, open Events > Events in the menu. The [Events](../events) page will look similar to the screen capture below:
 
@@ -199,7 +199,7 @@ This view also allows for events to be split by meeting information, providing a
     * Show More options that may be done with the List of Events, or List of Meetings
     * It can be used to hide/show certain columns; make a selection and/or approve, inquire, reject, or cancel the selected meetings (if allowed)
 
-# Event Detail
+## Event Detail
 
 The [Event Detail](../event-detail) screen provides an overview of an event and its meetings. If allowed, an event can be edited (e.g., new meetings can be added), approved, rejected, or cancelled from this page. Course-related, class, and examination events also show additional information about their related objects (classes and courses), enrolled students, and their conflicts. [Event Detail](../event-detail) page can be reached from [Events](../events) or [Event Room Availability](../event-room-availability) page by clicking on the appropriate event.
 
@@ -280,7 +280,7 @@ Usually, a pending event can be either approved, rejected, or cancelled. Once ap
 
 * Examination events can be edited with `Event Edit Exam` permission (e.g., examination managers may be given such permission), or some or all of their meetings can be cancelled with `Event Meeting Cancel Exam` permission. There is also `Event Meeting Inquire Exam` permission that allows sending inquiries about the examination event.
 
-# Add Event
+## Add Event
 
 The [Add Event](../add-event) screen is used to request an event. An event can have just one meeting, or there can be multiple meetings that are on the same or on different days, times, and/or locations. Each meeting can also be approved, cancelled, or rejected separately, and it is possible to add additional meetings or cancel/delete some or all of the existing meetings later on as well (using the Edit Event page). The only limitation is that all the meetings must be from the same academic session.
 
@@ -373,7 +373,7 @@ Note that unless the new course-related event is approved and requires student a
 
 Note that unless the new course-related event is approved and requires student attendance, the student conflicts will only show on the new course-related event. When the event requires student attendance and it is approved, the conflict with the new course-related event will show on the other event as well.
 
-# Edit Event
+## Edit Event
 
 The [Edit Event](../edit-event) screen provides an interface for changing an existing event. This includes changing its properties (name, sponsoring organization, contacts, etc.) as well as adding new meetings, deleting/canceling, or modifying existing meetings.
 
@@ -426,7 +426,7 @@ Once the **Select** button is clicked, all the changes made in the Modify Meeti
 
 ![Event Management Manual](images/events-44.png){:class='screenshot'}
 
-# Room Availability
+## Room Availability
 
 The [Event Room Availability](../event-room-availability) screen lets the user set up dates, times, and location parameters in a similar manner as the Add Event screen. After clicking the **Search** button, the user can see a time grid with information about the availability of each of the locations matching his/her criteria. It is then possible to highlight available times and request those times for an event.
 
@@ -465,7 +465,7 @@ If allowed, clicking on a meeting will open the Event Detail page for the appro
     * Clear the filter and start over
 
 
-# Event Timetable
+## Event Timetable
 
 [Room](../room-timetable) / [Subject](../subject-timetable) / [Curriculum](../curriculum-timetable) / [Departmental](../departmental-timetable) / [Personal Timetable](../personal-timetable) page is a variant of the [Events](../events) page that allows to see a timetable of a particular room, subject area or one of its courses, curriculum or one of its classification, department, or a person.
 
@@ -509,7 +509,7 @@ A useful feature is the ability to export the personal schedule as an iCalendar 
 
 ![Event Management Manual](images/events-52.png){:class='screenshot'}
 
-# Administration
+## Administration
 
 ## Event Statuses
 

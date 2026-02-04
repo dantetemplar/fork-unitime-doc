@@ -9,7 +9,7 @@ updated: January 2026
 * table
 {:toc}
 
-# 1. Introduction
+## 1. Introduction
 
 In UniTime 4.2, a new component for automatic assignment of instructors to classes or courses has been created. The instructors (e.g., teaching assistants) are expected to be assigned after the course timetabling and student scheduling is done, using information from both course timetabling (course timetable) and student scheduling (student availability).
 
@@ -54,7 +54,7 @@ The instructor assignments can be computed automatically, using the instructor s
 
 The instructor scheduling problem is solved separately for each department. Only one solution can be saved for each department (like with the examinations). There is a commit process, however, and the actual instructor assignments and course coordinators are only populated when the solution is committed. Otherwise, the teaching assignments that were computed by the solver are only kept on the individual teaching request and they do not show outside of the department.
 
-# 2. Instructor Attributes
+## 2. Instructor Attributes
 
 First of all, instructor attribute types may need to be defined / reviewed. These are available at the Administration > Other > [Instructor Attribute Types](../instructor-attribute-types)
 
@@ -76,7 +76,7 @@ Each attribute has an abbreviation, name, type (see above), and it can be associ
 ![Instructor Scheduling](images/instructor-scheduling-2.png){:class='screenshot'}
 An example of the Courses > Input Data > [Instructor Attributes](../instructor-attributes) page.
 
-# 3. Instructor Setup
+## 3. Instructor Setup
 
 Instructor attributes and other requirements can be set on the instructors. There is the [Instructor Assignment Preferences](../instructor-assignment-preferences) page that can be reached from the [Instructor Detail](../instructor-detail) page by clicking the **Edit Assignment Preferences** button.
 
@@ -104,7 +104,7 @@ Support for the following distributions have been added in UniTime 4.8 (build 18
 
 The new attribute and preferences are also displayed on the [Instructor Detail](../instructor-detail) page and on the Instructors list.
 
-# 4. Teaching Requests Setup
+## 4. Teaching Requests Setup
 
 Instructors that are to be assigned automatically are not requested directly on classes, but there are teaching requests. Each teaching request may include multiple classes of the same course and provide some additional constraints.
 
@@ -166,7 +166,7 @@ Example of the Teaching Requests section on the Instructional Offering Detail pa
 
 Once the solver has run, the table also shows the current instructor assignments, together with their details (instructor external id, name, assigned / maximal teaching load, attributes, time, course, and distribution preferences). [Teaching Request Detail](../teaching-request-detail) dialog is shown when a teaching request is clicked that allows to see more details and to make an assignment change with or without the solver loaded in memory (see the Solver chapter below for more details).
 
-# 5. Instructor Scheduling Solver
+## 5. Instructor Scheduling Solver
 
 The instructor scheduling solver works much like any other UniTime solver. It can be loaded, unloaded, started, saved, etc. using the Courses > Instructor Scheduling > [Instructor Scheduling Solver](../instructor-scheduling-solver) page. There is a [Solver Log](../instructor-scheduling-solver-log) page, a page with [assigned](../assigned-teaching-requests) and [not-assigned teaching requests](../not-assigned-teaching-requests), and a page with [changes](../teaching-assignment-changes), and a page with [teaching assignments](../teaching-assignments). The [Teaching Assignments](../teaching-assignments) page provides a view from the instructor perspective whereas the [Assigned](../assigned-teaching-requests) (and [Not-Assigned](../not-assigned-teaching-requests)) Teaching Requests show the solutions from the teaching requests / courses perspective. Teaching requests and teaching assignments can be filtered by subject area or department, courses, instructors, or the individual attributes. More details are visible when a line (either a teaching request or a teaching assignment is clicked). The [detail page](../teaching-assignment-detail) allows for manual assignments and can also provide suggestions (when the data are loaded in the solver). It can switch between details of a particular teaching request or a particular instructor.
 
@@ -269,7 +269,7 @@ More details are visible when an instructor is clicked, showing the instructor d
 
 The [Teaching Assignment Changes](../teaching-assignment-changes) page can be used to display changes made by the solver (or manually) when the solver is loaded in memory. The page can compare the teaching assignments of the current solution, with the best solution, initial solution (useful when the solver is used in the MPP mode), or with the data saved in the database.
 
-# 6. Other Changes
+## 6. Other Changes
 
 This chapter describes additional changes related to the instructor scheduling.
 

@@ -10,7 +10,7 @@ updated: January 2026
 {:toc}
 
 
-# Rooms
+## Rooms
 
 The first step in timetabling data entry is to ensure that all rooms to be scheduled are maintained in UniTime.
 
@@ -190,7 +190,7 @@ You only may update your (departmental) room groups. The Global Room Groups must
 
 ![Course Timetabling Data Entry Manual](images/courses-entry-11.png){:class='screenshot'}
 
-# Instructors
+## Instructors
 
 The second step with timetabling data entry will be to ensure that all instructors who will be assigned to classes are maintained within UniTime. You will see the list of your instructors when you click on Instructors in the left-hand side menu. Before you start working on classes, make sure that the instructor list is complete.
 
@@ -259,7 +259,7 @@ It is possible to configure UniTime to allow instructors to fill in their prefer
 
 Additional information about the instructor, such as teaching preference, maximal teaching load, and attributes can be configured on the [Instructor Assignment Preferences](../instructor-assignment-preferences) page when the **Edit Assignment Preferences** button is clicked. These assignment preferences are only used by the instructor scheduling module. For more details, please see the [Instructor Scheduling Manual](instructor-scheduling), chapter [3. Instructor Setup](instructor-scheduling#3-instructor-setup).
 
-# Instructional Offerings
+## Instructional Offerings
 
 To see the list of instructional offerings, click on **Courses > Input Data > [Instructional Offerings](../instructional-offerings)** in the menu. If you have more than one subject area, select the subject area you want to work with from the drop down menu and click Search. If you have only one subject area, it will display automatically.
 
@@ -475,7 +475,7 @@ The user has the ability to add consent required at the offering level. The foll
 
 *Banner:*{:style='color:blue;'} If a consent feature does not apply to each section of the offering, do NOT place the consent at the course offering level. Place the consent flag on the individual sections with the [Banner Offerings](../banner-offerings) form.
 
-# Banner Message Responses
+## Banner Message Responses
 
 The [Banner Message Responses](../banner-message-responses) screen allows you to search for instructional offerings that contain errors when interfacing with Banner. These offerings were not pushed to Banner.
 
@@ -486,7 +486,7 @@ You may use the filter to search by subject area, course number, CRN, Action Typ
 In order to push these instructional changes to Banner, you must use the [Banner Offerings](../banner-offerings) screen. Select the instructional offering you wish to resend.
 * You will be redirected to the [Banner Offering Detail](../banner-offering-detail) screen. From this screen, you will need to click the **Resend to Banner** button.
 
-# Banner Offerings
+## Banner Offerings
 
 The [Banner Offering](../banner-offerings) form provides the functionality to resend classes that did not import correctly, once corrected within the application.
 
@@ -517,7 +517,7 @@ If you wish to change the gradable subpart select the drop down box located next
 
 *Note:* By changing the gradable subpart, the Banner form SSASECT will be updated to reflect the gradable subpart, populate the approved course credit hours/billing hours and check the appropriate Banner box labeled gradable. The non-gradable subpart will have zero credit/billing hours and will be flagged as non-gradable.
 
-# Preferences for a Scheduling Subpart
+## Preferences for a Scheduling Subpart
 
 To set preferences for the whole scheduling subpart (i.e., LEC), that is, for all classes in that scheduling subpart, click on the line with the name of the subpart in the [Instructional Offering Detail](../instructional-offering-detail) screen.
 
@@ -561,7 +561,7 @@ The default room group for departmental classes is Classroom, but you can change
 
 When you finish with preferences, click **Update** at the top or bottom of this page to save all of your preferences for the scheduling subpart. This takes you back to the [Scheduling Subpart Detail](../scheduling-subpart-detail) screen. This screen will allow you to verify your changes.
 
-# Preferences for an Individual Class
+## Preferences for an Individual Class
 
 To set up preferences on an individual class, click on the class you wish to adjust from the [Instructional Offering Detail](../instructional-offering-detail) screen. This takes you to the [Class Detail](../class-detail) screen.
 
@@ -579,7 +579,7 @@ For your departmental classes, these notes will be notes to yourself. Click **Up
 
 ![Course Timetabling Data Entry Manual](images/courses-entry-34.png){:class='screenshot'}
 
-# Cross-listed Courses
+## Cross-listed Courses
 
 Any courses that meet together need to be set up as a cross-listed offering. This insures student course information will reflect the total demand as well as insure the same time(s) and location(s) are assigned for all courses in the cross list.
 
@@ -615,7 +615,7 @@ The following instructions will help you set up cross listing of courses for you
 
 Not all sections are cross listed. In this case we would create separate offerings and use the **Meets Together** distribution preference.
 
-# Add Distribution Preferences
+## Add Distribution Preferences
 
 To have your classes distributed a certain way throughout the week (e.g., back-to-back or same time/same room), select **Courses > Input Data > Distribution Preferences** in the menu. This takes you to the [Distribution Preferences](../distribution-preferences) form.
 
@@ -645,7 +645,7 @@ To add a new distribution preference
 * To edit an existing distribution preference, click on the distribution preference line you want to edit in the list of distribution preferences and edit it.
 * Make your changes and click **Update**.
 
-# Tips and Tricks
+## Tips and Tricks
 
 * To print out your list of classes with preferences, use the Export PDF button available in the Classes or Instructional Offerings screen.
 * There are shortcut keys in most screens – just roll your mouse over a button or link and you will see what the shortcut keys for that action are. A list of basic ones:
@@ -670,7 +670,7 @@ To add a new distribution preference
 
 See [Application Of Preferences](../application-of-preferences) for more details.
 
-# Glossary
+## Glossary
 
 ## Distribution Types
 

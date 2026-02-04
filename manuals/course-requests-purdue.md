@@ -12,7 +12,7 @@ updated: January 2026
 
 The [Student Course Requests](../student-course-requests) page (sometimes abbreviated as CRF) was created to help students quickly enter their course requests.  It takes a list of courses a student is interested in and calls a validation routine to determine whether there are any roadblocks to the student registering for the selected courses.  If a student’s course request issues can be resolved by obtaining the necessary overrides, the student may use this page to request them.
 
-# Navigating to the Course Requests Page
+## Navigating to the Course Requests Page
 
 To use the [Student Course Requests](../student-course-requests), go to myPurdue.purdue.edu and enter your career account name and password on the login screen and press the **Login** button.
 
@@ -40,7 +40,7 @@ You can always review the **Session** in the upper-right corner to ensure the co
  
 If the term listed is incorrect, click on the term that is listed.
 
-# Advisor Course Recommendations
+## Advisor Course Recommendations
 
 If a student has been advised using the [Advisor Course Recommendations](../advisor-course-recommendations) page first, the page will get pre-populated with the advisor recommendations. **You still need to review the list and click the Submit Requests button to confirm your pre-registration!**
 
@@ -52,7 +52,7 @@ If a student has been advised using the [Advisor Course Recommendations](../advi
 
 Click **Apply** to fill your Course Requests with the advisor recommendations, or **Close** to close the dialog.
 
-# Configuring Your Course Requests
+## Configuring Your Course Requests
 
 Depending on the status of your course registration, when you enter the [Student Course Requests](../student-course-requests) page, you may either see the page with no courses listed or with a set of courses listed and icons next to them indicating the status of each course requested.
 
@@ -137,7 +137,7 @@ Continue filling in the course request input boxes until you have entered all yo
 
 You can make changes to this list by adding courses to the empty spots in the grid.  To remove courses, use the trash can icon ![trashcan](../images/icon-button-delete.png) to the right of the line associated with the course. To change priorities, use the up ![up](../images/icon-button-up.png) and down ![down](../images/icon-button-down.png) arrows. To submit a free time request, use the magnifying glass icon ![magnifying glass](../images/icon-finder.png) to take you to the [Course Finder](../course-finder) dialog where you can build a free time request. More experienced users may also enter a time statement covering the desired free time.
 
-# Submitting Course Requests
+## Submitting Course Requests
 
 Once you are satisfied with your course, alternatives, and free time requests, press the **Submit Requests** button in the bottom right-hand corner of the page.
 
@@ -177,7 +177,7 @@ Once the course requested have been submitted and the overrides requested you sh
 
 You are done and can leave the page now.
 
-# Student Course Requests Page after Request Submission
+## Student Course Requests Page after Request Submission
 
 Once a submitted course request exists, additional data about each of the submitted course requests will appear on the course request form.
 

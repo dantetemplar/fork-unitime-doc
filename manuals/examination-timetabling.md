@@ -10,7 +10,7 @@ updated: September 2025
 {:toc}
 
 
-# Introduction
+## Introduction
 
 UniTime can be used to build an examination schedule that minimizes the number of conflicting exam placements for all students and instructors. Besides direct conflicts, it also minimizes the number of back-to-back exams or students with more than two exams in a day.
 
@@ -18,7 +18,7 @@ Multiple examination problems can be defined, such as final exams, mid-term exam
 
 For more details about the examination timetabling problem and the available constraints, please see the [Examination Timetabling](../examination-timetabling) document.
 
-# Administration
+## Administration
 
 For examination timetabling to be enabled, the following administration tasks are required. A Session Administrator or the Examination Timetabling Manager typically performs these tasks. The examination timetabling usually happens at the central (academic session) level. The Department Schedule Managers can indicate which courses or classes need an exam, the instructor(s) for the exams, and their preferences and requirements. The examination solver is run by the Examination Timetabling Manager at the central/academic session level for all the departments together. This is because many students may have courses across multiple departments, and it is usually imperative to ensure there are as few student conflicts as possible. 
 
@@ -108,7 +108,7 @@ It is also possible to attach examination managers to each examination type (for
 
 The Examination Statuses permission is needed to access the page. Permission Examination Status Edit is needed to make changes.
 
-# Data Entry
+## Data Entry
 
 The individual exams can be seen and configured on the Examinations > Input Data > [Examinations](../examinations) screen. Additional distribution constraints between individual exams can be configured using the Examinations > Input Data > [Distribution Preferences](../examination-distribution-preferences) screen.
 
@@ -181,7 +181,7 @@ Click on any distribution preference to get to the [Edit Examination Distributio
 
 Prohibited or required preferences must be satisfied by the solver (also referred to as *hard constraints*). The (strongly) discouraged or preferred preferences are optimized (the solver tries to satisfy as many as possible, also referred to as *soft constraints*). In the case of distribution preferences set between three or more exams, each violated examination pair is penalized separately, allowing the solver to satisfy as many examination pairs as possible.
 
-# Examination Solver
+## Examination Solver
 
 The examination solver can be run using the Examination > Examination Timetabling > [Examination Solver](../examination-solver) page. Unlike with the course timetabling, only one solution can be saved in the database, directly populating the examination assigned period and room(s). If a solution is already saved, it gets automatically loaded in as well. After loading the data into the solver, please check all the warnings, either directly on the [Examination Solver](../examination-solver) page or on the [Examination Solver Log](../examination-solver-log) page.
 
@@ -251,7 +251,7 @@ The Examination > Examination Timetabling > [Changes](../examination-assignment-
 
 ![Examination Assignment Changes](../images/examination-assignment-changes-1.png){:class='screenshot'}
 
-# Making Changes
+## Making Changes
 
 The [Examination Assignment](../examination-assignment) dialog can be used to manually assign an exam or change its assigned period and/or room(s). It opens when an exam on any of the Examination > Examination Timetabling pages is clicked, or when the **Assign** button is used on the [Examination Detail](../examination-detail) page.
 
@@ -263,7 +263,7 @@ For the selected examination, a new period and/or rooms can be selected on this 
 
 When one or more examinations conflict with the new assignment, they will be listed in the **New Assignment(s)** table as unassigned, along with this change. The user can then select them and choose a new period and/or room(s) for them. No changes are made until the **Assign** button is clicked, and it is possible to make changes that involve multiple examinations. A typical example is a room swap between two exams.
 
-# Reporting
+## Reporting
 
 There are three pages that can be used to provide examination timetabling reports.
 
@@ -335,7 +335,7 @@ Lastly, there is the Examinations > [Reports](../hql-reports) page. This page ca
 
 The Examinations > Reports option menu is only available when at least one examination HQL report has been created or imported.
 
-# Solver Customization
+## Solver Customization
 
 The solver weights and parameters can be customized using the Administration > Solver > [Configurations](../solver-configurations) page. This section includes additional customization options for the solver and/or parameters that are not available by default.
 

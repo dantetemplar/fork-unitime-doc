@@ -11,7 +11,7 @@ updated: Janury 2026
 
 Student group reservations are used to ensure a specific set of students are scheduled in a specific course section.  This document describes the process of creating student group reservations.
 
-# Student Group Types
+## Student Group Types
 
 Student group types can be created to organize student groups and assign additional meaning to a student group.  To create a student group type go to the **Administration > Other > [Student Group Types](../student-group-types)** page.
 
@@ -45,7 +45,7 @@ The student group type is visible on the [Student Group Types](../student-group-
 
 This [Edit Student Group Types](../edit-student-group-types) page can be used to edit the data associated with the group type.
 
-# Student Groups
+## Student Groups
 
 Student groups are used to represent a set of students who for any number of reasons need to be grouped together.
 
@@ -86,7 +86,7 @@ The student group is visible on the Student Groups page and available to be used
 
 This [Edit Student Group](../edit-student-group) page can be used to edit the list of students associated with the group.
 
-# Student Group Reservations
+## Student Group Reservations
 
 [Student Group Reservations](../reservations) are used to reserve space for students belong to a [Student Group](../student-groups) to a particular course.  The reservations can be set at the course level, the configuration level, or the individual class level.
 

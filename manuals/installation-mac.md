@@ -10,7 +10,7 @@ version: 4.8
 {:toc}
 
 
-# 1. Install Java 11 or later
+## 1. Install Java 11 or later
 
 
 Download Java JDK from [https://www.oracle.com/java/technologies/downloads](https://www.oracle.com/java/technologies/downloads/#jdk21-mac) (a file named like `jdk-22_macos-aarch64_bin.dmg`), start it up and follow the installation instructions
@@ -45,7 +45,7 @@ Wait for the installation to finish...
 Click Close
 
 
-# 2. Install MySQL 8.0
+## 2. Install MySQL 8.0
 
 
 Download MySQL Community Server from [https://dev.mysql.com/downloads/mysql](https://dev.mysql.com/downloads/mysql) (a file named like `mysql-8.0.37-macos14-arm64.dmg`), start it up and follow the installation instructions.
@@ -86,7 +86,7 @@ Fill in the "root" password, click Finish.
 
 Click Close
 
-# 3. Install Apache Tomcat 9.0
+## 3. Install Apache Tomcat 9.0
 
 **Note:** Tomcat 10 or later are currenrtly not supported!
 
@@ -129,7 +129,7 @@ chmod +x ~/Downloads/apache-tomcat-9.0.90/bin/*sh
 
 
 
-# 4. Install MySQL JDBC driver
+## 4. Install MySQL JDBC driver
 
 
 Download MySQL Connector/J driver from [https://dev.mysql.com/downloads/connector/j](https://dev.mysql.com/downloads/connector/j) (choose Platform Independent ZIP Archive, a file named like `mysql-connector-j-8.0.33.zip`). Unzip the downloaded file (double click the downloaded file). In `mysql-connector-j-8.0.33`, copy the extracted `mysql-connector-j-8.0.33.jar` into `apache-tomcat-9.0.90/lib`.
@@ -139,7 +139,7 @@ Download MySQL Connector/J driver from [https://dev.mysql.com/downloads/connecto
 
 
 
-# 5. Install UniTime
+## 5. Install UniTime
 
 
 Download UniTime from [https://github.com/UniTime/unitime/releases/latest](https://github.com/UniTime/unitime/releases/latest) (a file named like `unitime-4.8_bld139.zip`) and unzip it (double click the downloaded file).
@@ -197,7 +197,7 @@ Save the file. It should look like this (note the last line).
 See [http://help.unitime.org/installation#customization](../installation#customization) for more details.
 
 
-# 6. Start Tomcat
+## 6. Start Tomcat
 
 
 Start the Terminal (Launchpad > Other > Terminal), execute:
@@ -237,7 +237,7 @@ Tomcat can be stopped the same way, but using the stop.sh script instead.
 ~/Downloads/apache-tomcat-9.0.90/bin/stop.sh
 ```
 
-# 7. Check the logs for any errors ***(optional step)***
+## 7. Check the logs for any errors ***(optional step)***
 
 
 The logs are located in `apache-tomcat-9.0.90/logs` folder.

@@ -10,7 +10,7 @@ updated: November 2025
 {:toc}
 
 
-# Introduction
+## Introduction
 
 
 The timetabling application has been designed as a tool to assist schedule managers in building class timetables that best meet student course demand while working within the limitations of room availability and instructor time constraints. It is intended to help you take all of the important restrictions on location and time placement into account as you create the class timetable for a semester. It is also able to test multiple possible solutions far more quickly than can be done manually.
@@ -21,7 +21,7 @@ There are three basic steps involved in using the solver. The first is to **Load
 
 After a solution is found, it is also possible to modify the time and room assignments of individual classes using the solver in an interactive mode. This allows you to make any adjustments you may feel are necessary. The intent is for you to remain in control of your final timetable.
 
-# Check List
+## Check List
 
 1. Load Input Data
     - A) On [Solver](../course-timetabling-solver) screen, set solver configuration to **Check**. Click **Load**.
@@ -50,7 +50,7 @@ After a solution is found, it is also possible to modify the time and room assig
 6. Commit Timetable
 {:class='checklist'}
 
-# 1. Check input data consistency
+## 1. Check input data consistency
 
 Using the **Check** configuration of the solver.
 
@@ -82,7 +82,7 @@ To use the solver, start by clicking on Courses > Course Timetabling > [Solver](
 
 ![Course Timetabling Solver Manual](images/courses-solver-5.png){:class='screenshot'}
 
-# 2. Search for a complete timetable 
+## 2. Search for a complete timetable 
 
 Once checking for data consistency is complete and all warnings or errors are addressed, you can be sure that all classes will be included when you load data into the solver. Remember, if this is not the case and you ignored a warning, the solver may not load this class, and a time and room will not be found for this class. See [Appendix A](#appendix-a--list-of-warnings) for more details.
 
@@ -133,7 +133,7 @@ There could be many reasons for that. The most straightforward way to search for
 
 If you have fixed all problems with not-assigned classes and the solver found a complete solution (100% of variables are assigned and there are no classes that did not get loaded into the solver), you can **Unload** and proceed to the next part of this manual.
 
-# 3. Create an optimized timetable for your department 
+## 3. Create an optimized timetable for your department 
 
 If running the solver in the **Check** configuration has resulted in all classes being assigned, you can proceed with creating an optimized timetable for your department. Please note, however, that the ability of the solver to optimize the solution will depend on the amount of flexibility you have allowed it in your input data. If the vast majority of your times and rooms have been marked as **Required**, there is little or no room for optimization.
 
@@ -174,7 +174,7 @@ In this section, another configuration (Default) of the solver will be used, whi
 ![Course Timetabling Solver Manual](images/courses-solver-11.png){:class='screenshot'}
 
 
-# 4. Look at the properties of the timetable
+## 4. Look at the properties of the timetable
 
 
 Before you look at the timetable, it is recommended you look at the properties of the timetable. You can see some of them in the [Course Timetabling Solver](../course-timetabling-solver) screen and then look at a different kind of information in the Reports screen.
@@ -232,7 +232,7 @@ If you want to print the Reports screen, click the **Export PDF** button at the 
 
 This gives you information about those scheduling subparts in which the classes are not distributed very evenly throughout a day. For example, if your subpart has three classes and all the classes are at the same time, then all the classes of this subpart will be listed here, since the solver's configuration assumes you prefer your classes spread (so that students have options), and the solver wants to warn you that this was not possible for one of your subparts.
 
-# 5. Look at the timetable 
+## 5. Look at the timetable 
 
 
 The timetable can then be seen in either the [Timetable](../timetable) or the [Assigned Classes](../assigned-classes) screen, as described in this chapter.
@@ -295,7 +295,7 @@ As in [Instructional Offerings](../instructional-offerings), you can also displa
 
 ![Course Timetabling Solver Manual](images/courses-solver-21.png){:class='screenshot'}
 
-# 6. Make Changes to the Timetable 
+## 6. Make Changes to the Timetable 
 
 From any screen that displays your timetabled classes (Timetable, Assigned, Reports,…), clicking on the class number takes you to the [Suggestions](../suggestions) screen. This screen opens in a dialog window.
 
@@ -398,7 +398,7 @@ The **Selected Assignments** will display the whole history of these changes. No
 
 When you click **Assign**, the [Suggestions](../suggestions) window will automatically be closed. You may need to click **Refresh** in the page from which you got to the [Suggestions](../suggestions) window to be able to see the changes that you have made.
 
-# 7. Save the Timetable
+## 7. Save the Timetable
 
 
 Go back to the [Course Timetabling Solver](../course-timetabling-solver) screen.
@@ -411,7 +411,7 @@ Go back to the [Course Timetabling Solver](../course-timetabling-solver) screen.
 
 ![Course Timetabling Solver Manual](images/courses-solver-29.png){:class='screenshot'}
 
-# 8. Work with the interactive solver 
+## 8. Work with the interactive solver 
 
 The **Interactive** configuration of the solver has the highest flexibility for users' changes. The user can do almost anything in here, including putting classes in prohibited rooms at prohibited times.
 
@@ -458,7 +458,7 @@ When you are done making changes, save the timetable in the [Saved Timetables](.
 
 If you want to return to this timetable later, return to [Section 8.2](#82-work-with-an-existing-timetable).
 
-# 9. Commit a timetable 
+## 9. Commit a timetable 
 
 Committing is publishing your timetable for others to see and to be able to build their timetables on top of yours. By committing, you are saying that this is the timetable you want. Once you commit, the assigned times and rooms become visible to everybody else (the information can be viewed in the [Class Assignments](../class-assignments) screen – this screen is accessed by clicking on the Course Timetabling > Input Data > Class Assignments item in the left-hand side menu). Other departments will see student conflicts between your and their classes. Even after you commit, you can make changes to your timetable and commit again until the deadline set by your institution for departmental timetabling is reached. This should not happen very often.
 
@@ -477,7 +477,7 @@ The feedback for you that the timetable has been committed is the date and time 
 
 ![Course Timetabling Solver Manual](images/courses-solver-37.png){:class='screenshot'}
 
-# 10. Tips and Tricks 
+## 10. Tips and Tricks 
 
 ### Exporting the solution
 
@@ -489,7 +489,7 @@ If you need to work with the timetable in other applications (e.g., Access, Exce
 
 
 
-# Appendix A – List of warnings
+## Appendix A – List of warnings
 
 | Type | Message | Note |
 | INFO | No student enrollments for offering O. | There are no last-like semester student enrollments for instructional offering O. Classes of this offering might require special attention, since they will not create any student conflicts with other classes. |

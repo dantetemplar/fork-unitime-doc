@@ -1,0 +1,242 @@
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script>
+    // Preload Pagefind API
+    (async function() {
+        try {
+            const pagefind = await import("/pagefind/pagefind.js");
+            window.pagefind = pagefind;
+            console.log('Pagefind API loaded successfully');
+        } catch (error) {
+            console.error('Failed to load Pagefind API:', error);
+        }
+    })();
+</script>
+<script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+<!-- The Modal Structure -->
+<dialog id="searchModal" class="search-dialog">
+    <button class="search-modal-close" onclick="closeSearchModal()" aria-label="Close search">✕</button>
+    <div id="search-modal-content" style="min-height: 200px;">
+        <!-- Pagefind UI will be rendered here -->
+        <div style="padding: 20px; text-align: center; color: #666;">Loading search...</div>
+    </div>
+</dialog>
+<style>
+.search-trigger {
+    display: inline-flex !important;
+    align-items: center;
+    padding: 6px 12px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-family: inherit;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.search-trigger:hover {
+    background: #e8e8e8;
+    border-color: #749ad1;
+    color: #749ad1;
+}
+
+.search-trigger:focus {
+    outline: 2px solid #749ad1;
+    outline-offset: 2px;
+}
+
+.search-trigger svg {
+    flex-shrink: 0;
+    margin-right: 6px;
+    stroke: currentColor;
+}
+
+.search-trigger span {
+    margin-right: 8px;
+}
+
+.search-trigger kbd {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 6px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    font-size: 11px;
+    font-family: monospace;
+    color: #666;
+    margin-left: 4px;
+}
+
+
+/* Minimal modal styles */
+.search-dialog {
+    position: fixed;
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+}
+
+.search-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.search-modal-content {
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.search-modal-close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    z-index: 10001;
+}
+
+.search-modal-close:hover {
+    color: #333;
+}
+
+</style>
+<script>
+    let searchUI = null;
+    
+    // Initialize Pagefind UI when modal opens (lazy initialization)
+    function initPagefindUI() {
+        if (searchUI) {
+            return; // Already initialized
+        }
+        
+        if (typeof PagefindUI === 'undefined') {
+            console.error('PagefindUI is not loaded. Check if /pagefind/pagefind-ui.js is accessible.');
+            const searchContainer = document.getElementById('search-modal-content');
+            if (searchContainer) {
+                searchContainer.innerHTML = '<div style="padding: 20px; color: #d32f2f;">Search script not loaded.</div>';
+            }
+            return;
+        }
+        
+        const searchContainer = document.getElementById('search-modal-content');
+        if (!searchContainer) {
+            console.error('Search container not found');
+            return;
+        }
+        
+        // Clear container
+        searchContainer.innerHTML = '';
+        
+        try {
+            // Try to detect the correct path
+            const scriptTag = document.querySelector('script[src*="pagefind-ui.js"]');
+            let bundlePath = "/pagefind/";
+            if (scriptTag) {
+                const scriptSrc = scriptTag.getAttribute('src');
+                const scriptPath = scriptSrc.substring(0, scriptSrc.lastIndexOf('/') + 1);
+                bundlePath = scriptPath;
+                console.log('Detected bundlePath:', bundlePath);
+            }
+            
+            console.log('Initializing Pagefind UI...');
+            searchUI = new PagefindUI({
+                element: "#search-modal-content",
+                bundlePath: bundlePath,
+                showSubResults: true,
+                showImages: false,
+                autofocus: true,
+            });
+            
+            console.log('Pagefind UI initialized successfully');
+            
+        } catch (error) {
+            console.error('Failed to initialize Pagefind UI:', error);
+            searchContainer.innerHTML = '<div style="padding: 20px; color: #d32f2f;">Failed to initialize search: ' + error.message + '</div>';
+        }
+    }
+    
+    // Open search modal
+    function openSearchModal() {
+        const modal = document.getElementById('searchModal');
+        if (modal) {
+            // Initialize Pagefind UI when modal opens
+            initPagefindUI();
+            
+            modal.showModal();
+            
+            // Focus search input after modal is shown
+            setTimeout(() => {
+                const searchInput = document.querySelector('.pagefind-ui__search-input');
+                if (searchInput) {
+                    searchInput.focus();
+                    console.log('Search input focused');
+                } else {
+                    console.warn('Search input not found. Waiting a bit more...');
+                    // Try again after longer delay
+                    setTimeout(() => {
+                        const searchInput = document.querySelector('.pagefind-ui__search-input');
+                        if (searchInput) {
+                            searchInput.focus();
+                        }
+                    }, 500);
+                }
+            }, 400);
+        }
+    }
+    
+    // Close search modal
+    function closeSearchModal() {
+        const modal = document.getElementById('searchModal');
+        if (modal) {
+            modal.close();
+        }
+    }
+    
+    // Keyboard shortcut Ctrl+K or Cmd+K
+    document.addEventListener('keydown', (e) => {
+        // Don't trigger if user is typing in an input (except if it's the search input)
+        if ((e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') && 
+            !e.target.classList.contains('pagefind-ui__search-input')) {
+            return;
+        }
+        
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const modal = document.getElementById('searchModal');
+            if (modal && modal.open) {
+                closeSearchModal();
+            } else {
+                openSearchModal();
+            }
+        }
+    });
+    
+    // Close modal on Escape key
+    document.getElementById('searchModal')?.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeSearchModal();
+        }
+    });
+    
+    // Close modal when clicking on backdrop
+    document.getElementById('searchModal')?.addEventListener('click', (e) => {
+        if (e.target === document.getElementById('searchModal')) {
+            closeSearchModal();
+        }
+    });
+</script>

@@ -9,7 +9,7 @@ updated: January 2026
 * table
 {:toc} 
 
-# Target Audience
+## Target Audience
 
 This manual is targeted at the system and session administrators, with description of the tasks that each of them does through the UniTime GUI. That means that this manual is useful once UniTime has been installed at an institution and a system administrator is able to log in.
 
@@ -23,7 +23,7 @@ The system administrator sets up system configuration, roles, permissions, and t
 
 The session administrator manages an academic session. He has access to data that is dependent on an academic session, such as departments, buildings and rooms, date patterns, time patterns, etc. He also manages the list of timetabling managers for that academic session.
 
-# Initial Setup of UniTime
+## Initial Setup of UniTime
 
 When UniTime is used for the first time, the system administrator needs to go through the sections **Other** and **Defaults** in the **Administration** menu. Another part that may be helpful in the setup is the **Utilities** section.
 
@@ -248,14 +248,14 @@ The table in the Permissions screen lists all the roles in UniTime and all the p
 
 Read the [page documentation](../permissions) to learn more about permissions.
 
-# Solver
+## Solver
 
 
 The [solver configuration](../solver-configurations) is also a task for a system administrator, since it is applicable to all the academic sessions. It can be found under **Administration > Solver**.
 
 Usually, the solver configuration is set up when course timetabling is done for the first time. There are also some default configurations (that come with the sample data) that are described in the documentation for course timetabling.
 
-# First Academic Session
+## First Academic Session
 
 When the initial setup is finished, a new Academic Session should be added. It can be done through an import (see [www.unitime.org/interface/sessionSetup.xml](https://www.unitime.org/interface/sessionSetup.xml) for an example) or through the UniTime user interface, which is described below.
 
@@ -490,7 +490,7 @@ Student demands help identify which courses should not overlap in the course tim
 * Last-like Course Demands - for each student from last year, there is a list of courses the student took
 	* See [www.unitime.org/interface/studentInfoImport.xml](https://www.unitime.org/interface/studentInfoImport.xml) and [www.unitime.org/interface/studentCrsDemandImport.xml](https://www.unitime.org/interface/studentCrsDemandImport.xml)
 
-# Next Academic Session
+## Next Academic Session
 
 Any following academic session can be set up using a combination of a roll forward and data imports.
 
@@ -529,7 +529,7 @@ The following data may be helpful to import.
 * Curricula information can be completely imported instead of rolled forward, if there is a good source of this data outside of UniTime
 * Students and their course demands (if UniTime is not used for [student scheduling](student-scheduling); either current course requests or last-year’s course enrollments)
 
-# Utilities
+## Utilities
 
 In **Administration > Utilities**, there are a few screens that provide a lot of additional flexibility to the administrator when working with UniTime. It depends on the permissions whether access to these screens will be allowed for session administrators or only system administrator. Normally, a session administrator would have access to a subset of the scripts and to the **Clear Cache** feature. The rest would be for a system administrator only.
 

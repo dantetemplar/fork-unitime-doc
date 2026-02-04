@@ -15,7 +15,7 @@ UniTime Configuration for Student Scheduling Only
 
 The purpose of the document is to describe how to configure UniTime for student scheduling using a class schedule imported from Banner rather than using UniTime to build a timetable.  This document describes the basic data that needs to be imported into the UniTime system and how to configure Banner XE Registration integration.  This document does not cover running the batch student scheduling process or real time student scheduling.
 
-# UniTime Installation
+## UniTime Installation
 
 
 The first step in using UniTime for student scheduling is to have a working instance of the UniTime system. Instructions for installing the UniTime system can be found at: [https://help.unitime.org/installation](../installation).
@@ -23,7 +23,7 @@ The first step in using UniTime for student scheduling is to have a working inst
 
  
 
-# Academic Session Setup
+## Academic Session Setup
 
 
 In order to configure UniTime to do student scheduling without first building the course timetable in UniTime, an academic session must be set up along with buildings and rooms. The externally generated course timetable must also be imported. These steps may all be accomplished via XML imports.  The formats required for the XML imports and exports supported by UniTime are defined at [XML Interfaces](../xml).  The three imports needed to load the required data are the ‘Academic session setup’ import, the ‘Buildings and Rooms’ import and the ‘Courses’ import.  An example of the ‘Academic session setup’ import can be found in [Appendix A](#appendix-a)  An example of the ‘Buildings and Rooms’ import can be found in [Appendix B](#appendix-b).  Please note that there is a trick to using the ‘Buildings and Rooms’ import.  Once the file has been imported, go to the Administration -> Academic Sessions -> Buildings page and press the ‘Update Data’ button or the imported building and room data will not be usable. An example of the ‘Courses’ import can be found in [Appendix C](#appendix-c).
@@ -54,7 +54,7 @@ For purpose of importing a timetable from Banner the following should be done:
 
 Once the session has been set up and the course timetable loaded, the academic session should be set to the ‘Timetable Published’ status. After this is done the student course requests must be either entered via the Course Requests page or imported.  The ‘Student Course Requests’ xml import can be used to import the data.  [Appendix D](#appendix-d) contains a sample course request xml (please note that course examples used in the sample course request xml do not match up with example courses in the sample timetable).  For more information about the data in the course requests, look at the help page associated with the Course Requests page as the data in the course request portion of the XML mirrors the data entered by the students on that page.  The following link is to this help page:  [http://help.unitime.org/student-course-requests](../student-course-requests).
 
-# Banner XE Registration Integration
+## Banner XE Registration Integration
 
 
 To use UniTime integrated into the Banner XE Registration API, the appropriate UniTime configuration properties must be set.  The following table lists the properties that need to be configured and either the value the property should be set to or a description of what the value should be. These can be configured via the Administration -> Defaults -> Configuration page.
@@ -107,7 +107,7 @@ The ‘Save.XE.NRSaveThreads’ parameter in Figure 2 needs to be added to the �
 ![UniTime Configuration for Student Scheduling Only](images/student-scheduling-configuration-2.png){:class='screenshot'}
 Figure 2
 
-# Matching UniTime Sessions to Banner Terms
+## Matching UniTime Sessions to Banner Terms
 
 In order for UniTime to use the correct Banner Term information in its exchange of data with Banner, a mapping between the UniTime Academic Session and the Banner Term Code needs to occur.  The [ExternalTermProvider](https://github.com/UniTime/unitime/blob/master/JavaSource/org/unitime/timetable/onlinesectioning/custom/ExternalTermProvider.java) interface that is used to calculate this value. It is plugged in using the unitime.custom.ExternalTermProvider application property.
 
@@ -155,7 +155,7 @@ default implementation of calculating the academic session will work for your in
 
  
 
-# Appendix A
+## Appendix A
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -278,7 +278,7 @@ default implementation of calculating the academic session will work for your in
 </sessionSetup>
 ```
 
-# Appendix B
+## Appendix B
 
 ```
 <buildingsRooms campus="WL" term="Fall" year="2019">
@@ -414,7 +414,7 @@ default implementation of calculating the academic session will work for your in
 </buildingsRooms>
 ```
 
-# Appendix C
+## Appendix C
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE offerings PUBLIC "-//UniTime//DTD University Course Timetabling/EN" "http://www.unitime.org/interface/CourseOfferingExport.dtd">
@@ -693,7 +693,7 @@ default implementation of calculating the academic session will work for your in
 </offerings>
 ```
 
-# Appendix D
+## Appendix D
 
 ```
 <request campus="WL" year="2019" term="Fall">

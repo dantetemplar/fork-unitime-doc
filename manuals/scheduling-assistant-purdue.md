@@ -9,7 +9,7 @@ updated: January 2026
 * table
 {:toc}
 
-# The Student Scheduling Assistant
+## The Student Scheduling Assistant
 
 The [Student Scheduling Assistant](../student-scheduling-assistant) was created to help students quickly build a workable class schedule.  It takes a list of courses a student is interested in and determines the class sections the student needs to take in order to get as many of the courses being requested as possible.  The [Student Scheduling Assistant](../student-scheduling-assistant) tries to calculate a schedule for the student based on the following criteria:
 
@@ -27,7 +27,7 @@ Once the assistant has suggested a schedule, a student can make changes to the s
 
 **Note:** Many sections only have one or two spaces available in them at any given time. If the [Student Scheduling Assistant](../student-scheduling-assistant) suggests one of these sections, it is a good idea to submit the schedule quickly by pressing the **Submit Schedule** button to be registered for it in myPurdue.  This is because the spaces may be taken by another student since the assistant does not block other students from registering for a suggested section.
 
-# Navigating to the Student Scheduling Assistant
+## Navigating to the Student Scheduling Assistant
 
 To use the [Scheduling Assistant](../student-scheduling-assistant), go to myPurdue.purdue.edu and enter your career account name and password on the login screen and press the **Login** button.
 
@@ -60,7 +60,7 @@ You can always review the **Session** in the upper-right corner to ensure the co
 If the term listed is incorrect, click on the term that is listed. 
 
 
-# Configuring Your Course Requests
+## Configuring Your Course Requests
 
 Depending on the status of your course registration, there are two possible screens you may be taken to when you enter the [Scheduling Assistant](../student-scheduling-assistant).
 
@@ -136,7 +136,7 @@ For more detailed information on the actions you can take on the Course Requests
 
 Once you have modified your course and free time requests, press the **Build Schedule** ![&rarr;] (../images/icon-right.png) button in the bottom right-hand corner of the page to get a suggested schedule.
 
-# Registering For Your Suggested Schedule
+## Registering For Your Suggested Schedule
 
 Once you have a suggested schedule, note the number of available spaces in each class.
 
@@ -166,7 +166,7 @@ Once you have registered for courses in myPurdue, that information will flow bac
 
 Multiple approvals can be requested at once. Please provide an explanation for each of the approvals requested, read and check the disclaimer, and click the **Request Approvals** button to request the approval(s). See more details in the [Registration Errors](#registration-errors) section at the end of this document.
 
-# Making Changes to Your Schedule
+## Making Changes to Your Schedule
 
 If you wish to make changes to your schedule, first decide which classes you want to keep at the suggested time.  Any such classes should be locked.  This can be done on the **List of Classes** tab by clicking the lock icon ![lock](../images/icon-unlock.png) next to a class.  You do not have to lock any of the classes.
 
@@ -235,13 +235,13 @@ Please note that if there are both sections being added and deleted, there are t
 
 The only exception is when all sections are being added (there is no course being dropped or section swapped). In this case, the system may enroll you in some courses (those without registration errors).
 
-# Printing Your Schedule
+## Printing Your Schedule
 
 If you want a printed copy of your schedule, press the **Print** button in the lower right-hand corner, and it will print to the local printer.  If a printed copy is not needed, you can log out of the system.
 
 The print output formats your suggested schedule grid and class list into one document.
 
-# Subscribing to a Calendar Feed of Your Schedule
+## Subscribing to a Calendar Feed of Your Schedule
 
 If you would like to subscribe to a calendar feed of your schedule in UniTime, select the **Personal Schedule** menu item.
 
@@ -261,7 +261,7 @@ A dialog will appear with a URL that can be used with your calendar tool of choi
 
 **Note:** Subscribing to the URL provided rather than just importing it into your calendar allows your calendar to be automatically updated if changes are made to the courses in your schedule and when evening and final exams are published.
 
-# Registration Errors
+## Registration Errors
 
 The [Scheduling Assistant](../student-scheduling-assistant) communicates with myPurdue to validate your PIN and eligibility to register when you open the assistant and select an academic session. It also communicates with myPurdue to validate your schedule request and enroll you in the courses that pass validation when the **Submit Schedule** button is pressed.  This section contains some samples of messages that may be returned to you as a result of the interaction between myPurdue and the Scheduling Assistant.  The examples are not meant to be an exhaustive collection of all messages that could be received.  You need to review any error messages returned and determine the action you need to take.  If you are unsure what action to take, contact your advisor.
 
@@ -312,7 +312,7 @@ Below are a few examples of messages you may receive from myPurdue when a course
 
 ![Student Scheduling Assistant](images/scheduling-assistant-purdue-67.png){:class='screenshot'}
 
-# Registration Workflow
+## Registration Workflow
 
 If allowed, you can request an approval for the registration error or errors by pressing the **Request Approvals** button on the **Registration Errors** dialog shown above.
 
@@ -370,7 +370,7 @@ Once requested, you will see the request for a variable title course in the **Ap
 
 **Note:** A pending approval request can be cancelled by clicking the trashcan icon on the right-hand side ![trash can](../images/icon-button-delete.png) of the approval request.
 
-# Wait-Listing
+## Wait-Listing
 
 If a course and the student status allow for wait-listing, it can be wait-listed on the **Course Requests** table using the **Wait-List** checkbox. Suppose the course is not available for the student, e.g., because it is full. In that case, it can also be wait-listed on the **List of Classes** (using the **Wait-List** checkbox on the line with the course) or on the [Alternatives](../alternatives-for-class) dialog when the course/class is clicked (using the **Wait-List** button).
 

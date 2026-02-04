@@ -30,13 +30,23 @@
               <ul class="nav navbar-nav  navbar-right">
                 {% include_relative sidebar.html %}
                 </ul>
+              <div class="navbar-right" style="margin-top: 8px; margin-right: 15px;">
+                <button id="search-trigger" class="search-trigger" onclick="openSearchModal()" aria-label="Search documentation">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                    <path d="M7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10zM13 13l-3-3"/>
+                  </svg>
+                  <span>Search</span>
+                  <kbd>Ctrl+K</kbd>
+                </button>
+              </div>
             </div>
         </div>
     </div>
-    <div class='container' style='text-align: justify; border-top: 2px solid #749ad1; padding: 10px;'>
+    <div class='container' data-pagefind-body style='text-align: justify; border-top: 2px solid #749ad1; padding: 10px;'>
+        <span data-pagefind-meta="title" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">{{ page.title }}</span>
         <table border='0' style="width:100%; vertical-align: middle; text-align: center; border: 1px solid black;">
             <tr><td rowspan='4' style="border: none; border-right: 1px solid black; vertical-align: middle;"><img class='logo' src='../images/unitime-logo.png' height="80px"/></td>
-            <td style="font-family: miriam-bold; font-size: 40px; border: none;">{{page.title}}</td>
+            <td style="font-family: miriam-bold; font-size: 40px; border: none;">  <h1 style="font: inherit;">{{ page.title }}</h1></td>
             </tr>
             <tr><td style="border: none; padding-top: 10px;">{% if page.version %}UniTime Version: {{page.version}}{% endif %}</td></tr>
             <tr><td style="border: none;">{% if page.updated %}Last Updated: {{page.updated}}{% endif %}</td></tr>
@@ -65,4 +75,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% include search.html %}
 </body>

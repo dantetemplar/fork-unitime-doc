@@ -10,7 +10,7 @@ updated: October 2025
 {:toc}
 
 
-# Introduction
+## Introduction
 
 Student scheduling, sometimes called *student sectioning*, involves assigning students to classes (course sections) based on their individual course demands. It consists of courses that have already been timetabled, students and their individual course demands, and producing a class schedule for each student. It is modeled as an assignment of student course requests with enrollments, i.e., valid combinations of classes that the student needs to take to enroll in a course. There are various hard constraints, such as students not having a time conflict (unless allowed, in which case the overlapping time is to be minimized), classes and courses being limited in size, or restrictions limiting who can attend a particular class or course. It is also an optimization problem, combining a long list of various criteria, such as maximizing the number
 of courses each student gets, considering student and course priorities, student preferences, penalizing alternatives and substitutes, minimizing distance conflicts or travel times, etc. In the rest of this section, the most interesting aspects of the student scheduling problem are discussed.
@@ -47,7 +47,7 @@ The student scheduling component requires that the course timetabling be already
 
 Besides the courses and the course timetable, the student scheduling also needs to have **students** imported, possibly with their course requests when the batch is used without doing [pre-registration](../student-course-requests) in UniTime. Students cannot be entered directly in UniTime; the expectation is that they will be imported from an external Student Information System. This can be done using the [Students XML](https://www.unitime.org/interface/studentInfoImport.xml) or the [Student Course Requests XML](https://www.unitime.org/interface/woebegonStudents.xml) format using the Administration > Academic Sessions > [Data Exchange](../data-exchange) page (see [XML Interfaces](../xml) for more details).
 
-# Batch Student Scheduling
+## Batch Student Scheduling
 
 The batch student scheduling is done using the Students > [Batch Solver](../student-scheduling-solver) page. The student schedules are computed using the student course requests that can be either filled in by students in UniTime using the [Student Course Requests](../student-course-requests) page (see below) or imported using the Administration > Academic Sessions > [Data Exchange](../data-exchange) page using the [Student Course Requests XML](https://www.unitime.org/interface/woebegonStudents.xml) format (see [XML Interfaces](../xml) for more details).
 
@@ -245,7 +245,7 @@ There is a set of solver-computed reports available on the Students > [Solver Re
 
 There are many reports, concentrating on various aspects of the student scheduling optimization and results, like time conflicts, availability conflicts, distance conflicts, section balancing, or unused reservations.
 
-# Online Student Scheduling
+## Online Student Scheduling
 
 During the online student scheduling, the students use the [Student Scheduling Assistant](../student-scheduling-assistant) to build their class schedule or make schedule changes. The [Online Student Scheduling Dashboard](../online-student-scheduling-dashboard) can be used to monitor student progress. Advising and the [Advisor Course Recommendations](../advisor-course-recommendations) page can still be used, though it has been primarily designed for pre-registration.
 
@@ -399,7 +399,7 @@ The Online Student Scheduling Dashboard screen provides a tool for displaying a 
 
 See [Student Scheduling Dashboard Manual](scheduling-dashboard) for additional documentation about the dashboard.
 
-# Additional Documentation
+## Additional Documentation
 
 There are also the following manuals:
 * Student Course Requests Manual (Purdue specific [link](course-requests-purdue))

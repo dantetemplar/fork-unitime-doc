@@ -5,3 +5,6 @@ _site
 .DS_Store
 vendor
 Gemfile.lock
+_pagefind
+pagefind
+node_modules

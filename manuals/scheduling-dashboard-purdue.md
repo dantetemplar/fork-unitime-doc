@@ -28,7 +28,7 @@ Depending on the User Role assigned to a user, access to the data in the above c
 
 **Note:** This documentation may use the terms UniTime Student Scheduling Dashboard, UniTime Scheduling Dashboard, Student Scheduling Dashboard, and Online Student Scheduling Dashboard interchangeably.
 
-# Important: Difference with Batch Student Solver Dashboard
+## Important: Difference with Batch Student Solver Dashboard
 
 The [Batch Student Solver Dashboard](../batch-student-solver-dashboard) offers similar functionality; the data displayed on the batch dashboard is related to the [Student Scheduling Solver](../student-scheduling-solver). For users that do not directly interact with the solver, the [Batch Student Solver Dashboard](../batch-student-solver-dashboard) shows the data from the last [published solver run](../published-schedule-runs). During pre-registration, these are typically the results of the previous night's simulation. After the batch is complete, the page displays the final run of the batch student scheduling solver, i.e., the final students' schedules as they have been pushed to Banner. 
 
@@ -42,7 +42,7 @@ That said, the [Batch Student Solver Dashboard](../batch-student-solver-dashboar
 
 After the batch is done, the [Batch Student Solver Dashboard](../batch-student-solver-dashboard) can still be used to see the initial schedule of a student.
 
-# Accessing the Student Scheduling Dashboard
+## Accessing the Student Scheduling Dashboard
 
 When a user logs into UniTime, if the user's default user role has access to the Scheduling Dashboard in the academic session in which the user is logged in, then a menu item for the **Online Scheduling Dashboard** should be visible.  If the **Online Scheduling Dashboard** is not visible, the user may need to switch to a different role or academic session.
 
@@ -76,7 +76,7 @@ This will take the user to the [Online Student Scheduling Dashboard](../online-s
 ![Student Scheduling Dashboard Manual](images/scheduling-dashboard-purdue-7.png){:class='screenshot'}
 
 
-# Using the Student Scheduling Dashboard Filter
+## Using the Student Scheduling Dashboard Filter
 
 The filter at the top of the [Online Student Scheduling Dashboard](../online-student-scheduling-dashboard) page controls the search criteria used to display data on the page.  When the user accesses the [Online Student Scheduling Dashboard](../online-student-scheduling-dashboard) page for the first time, the filter will be blank. Once the user enters a search criterion in the filter and performs a search, the page will remember the user's last search and automatically populate the filter with that criterion the next time the user accesses the page.
 
@@ -163,7 +163,7 @@ In addition to backspacing over a search criterion item, it is also possible to 
 
 ![Student Scheduling Dashboard Manual](images/scheduling-dashboard-purdue-18.png){:class='screenshot'}
 
-# Using the Student Scheduling Dashboard
+## Using the Student Scheduling Dashboard
 
 
 The data retrieved by doing a search using the criteria entered in the [Filter](../scheduling-dashboard-filter) is available to the user in a set of tabs.  Each tab provides a specific view into the data.  The **Enrollments** tab shows the data organized by Course Offering.  The **Student** tab shows the data organized by Student.  The **Change Log** tab, which is not available to all users, shows the change log data associated with the information retrieved by the search criteria.  The user can switch between the **Enrollments** tab, the **Students** tab, and the **Change Log** tab by clicking the desired tab name.
@@ -573,7 +573,7 @@ A user can drill down deeper into the change log data for a student.  The user 
 
 The data displayed on the Change Message pop-up for a change log entry will vary based on the change that occurred.  If the change log entry is associated with a student’s schedule, the entry will contain detailed information about the schedule before and after any changes were made.  The change log entry will also contain the JSON Proto Buffer of the message used to make the change. 
 
-# User Roles and the Student Scheduling Dashboard
+## User Roles and the Student Scheduling Dashboard
 
 
 The documentation above mentions many times that the data and actions available to a user are governed by the user role used to access the Student Scheduling Dashboard.   The roles covered are as follows:

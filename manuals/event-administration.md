@@ -9,7 +9,7 @@ updated: December 2025
 * table
 {:toc}
 
-# Event Manager Administrative Tasks in UniTime
+## Event Manager Administrative Tasks in UniTime
 
 UniTime includes the following capabilities for Event Managers:
 * Ability to create, edit, send inquiries about, and approve events in the rooms they manage.
@@ -22,7 +22,7 @@ UniTime includes the following capabilities for Event Managers:
 
 These capabilities give Event Managers fine-grained control over the rooms they manage.
 
-# Managing Room Event Status Functionality
+## Managing Room Event Status Functionality
 
 [Event Statuses](../event-statuses) allow managers to control which rooms are available for users to approve and also restrict the set of users who can request events in a room.
 
@@ -102,7 +102,7 @@ If an Event Manager selects a single room or room type in the Event Statuses lis
 
 This page allows the Event Manager to edit the same data that can be edited on the list page.
 
-# Service Providers
+## Service Providers
 
 Service Providers can be created at a global or departmental level.  Service providers provide a way to automatically notify the service provider that an event requires a specific service at the time the event is approved, and to automatically notify the service provider if the event is canceled.
 
@@ -124,7 +124,7 @@ On the [Event Service Providers](../event-service-providers) page, the Event Man
 
 ![Event Manager Administrative Tasks](images/event-administration-13.png){:class='screenshot'}
 
-# Department Specific Standard Notes
+## Department Specific Standard Notes
 
 Each Event Manager can now create standard notes that are specific to their department.  To do this, the Event Manager can go to the [Standard Notes](../standard-event-notes) page found under the Administration > Other tab.
 
@@ -144,7 +144,7 @@ On the [Standard Event Notes](../standard-event-notes) page, the Event Manager c
 
 ![Event Manager Administrative Tasks](images/event-administration-17.png){:class='screenshot'}
 
-# Controlling the Times a Room is Available for Events
+## Controlling the Times a Room is Available for Events
 
 It is a common case to have an event room that is not available for events all day, every day. It is also a common case for an Event Manager to schedule an event in an event room during the window when the room is closed.  UniTime allows an event manager to control the times a room is available for events.  During the times when a room is not available for events, only the event manager of that room can schedule events in it.
 
@@ -172,7 +172,7 @@ An Event Manager for a room can apply changes to a room to multiple future acade
 
 ![Event Manager Administrative Tasks](images/event-administration-23.png){:class='screenshot'}
 
-# Managing Departmental Users
+## Managing Departmental Users
 
 When room types or rooms are restricted to Departmental Users for event requests, the list of users who can request the rooms is the department's instructors.  Event Managers can use the [Instructors](../instructors) page under the Courses > Input Data tab.
 

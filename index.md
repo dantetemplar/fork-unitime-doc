@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UniTime Documentation
+title: Home
 ---
 
 ## University Timetabling

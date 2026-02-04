@@ -30,11 +30,20 @@
               <ul class="nav navbar-nav  navbar-right">
                 {% include_relative sidebar.html %}
                 </ul>
+              <div class="navbar-right" style="margin-top: 8px; margin-right: 15px;">
+                <button id="search-trigger" class="search-trigger" onclick="openSearchModal()" aria-label="Search documentation">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;">
+                    <path d="M7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10zM13 13l-3-3"/>
+                  </svg>
+                  <span>Search</span>
+                  <kbd>Ctrl+K</kbd>
+                </button>
+              </div>
             </div>
         </div>
     </div>
-    <div class='container' style='text-align: justify; border-top: 2px solid #749ad1;'>
-        <h1>{{page.title}}</h1>
+    <div class='container' data-pagefind-body style='text-align: justify; border-top: 2px solid #749ad1;'>
+        <h1 data-pagefind-meta="title">{{page.title}}</h1>
         {% if page.forward %}
         See <a href='{{ page.forward }}'>{{ page.forward }}</a> for more details.<br><br>
         {% endif %}
@@ -58,4 +67,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% include search.html %}
 </body>

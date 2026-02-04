@@ -10,17 +10,17 @@ updated: April, 2019
 * table
 {:toc}
 
-# Authentication
+## Authentication
 
 Export calls can use HTTP-simple authentication with a user created using the UniTime’s [Users](../users-database-authentication) page, or if enabled (by setting the application property unitime.api.canUseToken to true) it can authenticated via an API token. The API token can be passed as an additional attribute (named ***token***) on any export call. The user must have a default role with the appropriate export permission (in general, the user must have the same permissions as to be able to do the export in UniTime). The API token is available on the Users page (when enabled), it is computed using the username and hashed password (changing password will also change the API token for a user).
 
 All export are using the export servlet (e.g., `GET UniTime/export?output=<format>`), with the mandatory **output** parameter specifies the type and format of the export. Additional parameters based on the export may be provided. Most exports require to specify the academic session at the very least (**sid** parameter containing unique id of the academic session or term parameter containing `<term><year><initiative>`, e.g., Fal2010woebegon; the initiative can be omitted if there is only one initiative for the given term and year, e.g., Fal2010).
 
-# CSV Format
+## CSV Format
 
 When a CSV is being exported csvDelimiter and csvQuotation parameters can be used to define delimiter and quotations in the resultant file.
 
-# 1 Events
+## 1 Events
 
 The UniTime events can be exported in iCalendar, CSV, or PDF format. The following outputs are allowed:
 
@@ -91,7 +91,7 @@ Class schedule of the first year of A/M1 curriculum
 
 [https://demo.unitime.org/UniTime/export?output=events.pdf&type=curriculum&name=A/M1+01&term=Fal2010&e:type=Class](https://demo.unitime.org/UniTime/export?output=events.pdf&type=curriculum&name=A/M1+01&term=Fal2010&e:type=Class)
 
-# 2 HQL Reports
+## 2 HQL Reports
 
 The HQL reports can be exported form UniTime in CSV format using output=hql-report.csv, or JSON format using output=hql-reports.json. These are, for instance, the reports available on the Courses > Reports page. HQL appearance and admin-only permissions are checked (the user must have the appropriate permissions to be able to get the report).
 
@@ -107,7 +107,7 @@ The following example returns results of the New Courses report for ALG and BIOL
 
 [https://demo.unitime.org/UniTime/export?output=hql-report.csv&report=New+Courses&token=1xhp5vo3zfxrpbzjzhtanmcipolx03fv42ohz4xa507x5acydh&term=Fal2010&SUBJECTS=ALG&SUBJECTS=BIOL](https://demo.unitime.org/UniTime/export?output=hql-report.csv&report=New+Courses&token=1xhp5vo3zfxrpbzjzhtanmcipolx03fv42ohz4xa507x5acydh&term=Fal2010&SUBJECTS=ALG&SUBJECTS=BIOL)
 
-# 3 Rooms
+## 3 Rooms
 
 The rooms, room groups and room features can be exported in CSV or PDF format, based on the **output** parameter:
 
@@ -166,7 +166,7 @@ Examples:
 
 [http://demo.unitime.org/UniTime/export?output=rooms.pdf&r:feature=Comp&r:building=EDUC&dm=4&orientation=horizontal&flags=52084765&token=1xhp5vo3zfxrpbzjzhtanmcipolx03fv42ohz4xa507x5acydh](http://demo.unitime.org/UniTime/export?output=rooms.pdf&r:feature=Comp&r:building=EDUC&dm=4&orientation=horizontal&flags=52084765&token=1xhp5vo3zfxrpbzjzhtanmcipolx03fv42ohz4xa507x5acydh)
 
-# 4 Student Scheduling Solver Reports
+## 4 Student Scheduling Solver Reports
 
 The student scheduling reports can be exported from the Online Student Scheduling Reports page (when output=sct-report.csv&online=true), from the Student Sectioning Solver Reports (when `output=sct-report.csv&online=false` for the solver of the user running the export, or the from the published solver when online parameter is not used).
 

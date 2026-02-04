@@ -1,0 +1,12 @@
+{
+  "name": "unitime-doc",
+  "version": "1.0.0",
+  "description": "UniTime Documentation",
+  "scripts": {
+    "pagefind": "pagefind --site _site && cp -r _site/pagefind pagefind",
+    "build": "bundle exec jekyll build && npm run pagefind"
+  },
+  "devDependencies": {
+    "pagefind": "^1.0.0"
+  }
+}

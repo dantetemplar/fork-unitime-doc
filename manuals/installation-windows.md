@@ -10,7 +10,7 @@ version: 4.8
 {:toc}
 
 
-# 1. Install Java 21
+## 1. Install Java 21
 
 
 Download JDK 21 from [hhttps://www.oracle.com/java/technologies/downloads](https://www.oracle.com/java/technologies/downloads/#jdk21-windows) (a file named like jdk-21_windows-x64_bin.exe), start it up and follow the installation instructions.
@@ -31,7 +31,7 @@ Wait for the installation to finish...
 
 Hit Close
 
-# 2. Install MySQL 8.4
+## 2. Install MySQL 8.4
 
 Download MySQL Community Server from [https://dev.mysql.com/downloads/mysql](https://dev.mysql.com/downloads/mysql) (a file named like mysql-8.4.0-winx64.msi), start it up and follow the installation instructions.
 
@@ -103,7 +103,7 @@ Click Next
 
 Click Finish
 
-# 3. Install Apache Tomcat 9.0
+## 3. Install Apache Tomcat 9.0
 
 **Note:** Tomcat 10 or later are currenrtly not supported!
 
@@ -148,14 +148,14 @@ This will open the Apache Tomcat 9.0 Tomcat9 Properties dialog.
 
 Select Java tab, and change **maximum memory pool** to at least 1024 MB. Click Apply and OK.
 
-# 4. Install MySQL JDBC driver
+## 4. Install MySQL JDBC driver
 
 Download MySQL Connector/J driver from [https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/) (choose Platform Independent ZIP Archive, a file named like `mysql-connector-j-8.4.0.zip`). Unzip the downloaded file (right-click the downloaded file and choose Extract All…). In `Downloads\mysql-connector-j-8.4.0`, copy the extracted `mysql-connector-j-8.4.0.jar` into `C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib`.
 
 ![Intalling Tomcat on Windows](images/installation-windows-tomcat10.png){:class='screenshot'}
 
 
-# 5. Install UniTime
+## 5. Install UniTime
 
 
 Download UniTime from [https://github.com/UniTime/unitime/releases/latest](https://github.com/UniTime/unitime/releases/latest) (a file named like unitime-4.8_bld139.zip) and unzip it (right click the downloaded file and choose Extract All..).
@@ -199,7 +199,7 @@ tmtbl.custom.properties=C:\\Program Files\\Apache Software Foundation\\Tomcat 9.
 See [http://help.unitime.org/installation#customization](../installation#customization) for more details.
 
 
-# 6. Restart Tomcat
+## 6. Restart Tomcat
 
 
 Open Apache Tomcat configuration (Start > All Programs > Apache Tomcat 9.0 > Configure Tomcat).
@@ -218,7 +218,7 @@ And log in using the admin user (both username and password is admin)
 
 ![Logging into UniTime on Windows](images/installation-windows-success.png){:class='screenshot'}
 
-# 7. Check the logs for any errors ***(optional step)***
+## 7. Check the logs for any errors ***(optional step)***
 
 The logs are located at `C:\Program Files\Apache Software Foundation\Tomcat 9.0\logs`
 

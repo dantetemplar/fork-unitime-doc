@@ -7,7 +7,7 @@ title: Setting up HTTPS for UniTime
 {:.no_toc}
 * table
 {:toc}
-# Setting up HTTPS for UniTime
+## Setting up HTTPS for UniTime
 
 Based on the instructions from the following websites:
 
